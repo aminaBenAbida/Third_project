@@ -21,7 +21,7 @@ alt.themes.enable("dark")
 @st.cache_data
 def load_data():
     # Charger les données
-    df = pd.read_excel('data/resultats.xlsx')  # Remplacer par votre chemin
+    df = pd.read_excel('./data/resultats.xlsx')  # Remplacer par votre chemin
     
     # Supprimer les deux premières lignes
     df = df.iloc[2:]
