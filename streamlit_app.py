@@ -186,9 +186,8 @@ if recherche_effectuee:
         resultat = rechercher_id(data, id_recherche)
         
         if not resultat.empty:
-            # Centrer le tableau
-            st.markdown('<div class="centered-container">', unsafe_allow_html=True)
-            st.dataframe(resultat,use_container_width=True)  # Utiliser st.dataframe pour un meilleur contrôle
+            st.markdown('<div class="full-width-container">', unsafe_allow_html=True)
+            st.dataframe(resultat, width="auto")  # Utilisation de 'width="auto"' pour s'adapter à la largeur de la page
             st.markdown('</div>', unsafe_allow_html=True)
         else:
             st.warning(f"لم يتم العثور على نتائج لـ {id_input} id رقم المدخل.")
